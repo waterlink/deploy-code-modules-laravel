@@ -13,6 +13,8 @@ end
 
 Deploy::Code.within_capistrano do
 
+  puts "Loading laravel module."
+
   namespace :laravel do
     task :fix_storage do
       run "chmod -R 777 #{deploy_to}/current/app/storage; true"
